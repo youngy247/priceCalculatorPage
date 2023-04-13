@@ -14,12 +14,24 @@ h1 {
 
 /* styling for toggle button
 
+
+ */
+
+.switch-container{
+    border: 1px solid red;
+    width: 23rem;
+    margin: 0 auto;
+}
 /* The switch - the box around the slider */
 .switch {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     width: 60px;
     height: 34px;
+    margin: 0 auto;
+    border: 1px solid red;
 }
 
 /* Hide default HTML checkbox */
@@ -27,6 +39,7 @@ h1 {
     opacity: 0;
     width: 0;
     height: 0;
+    margin: 3rem;
 }
 
 /* The slider */
@@ -78,4 +91,3 @@ input:checked + .slider:before {
 }
 
 
- */
