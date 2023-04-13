@@ -11,6 +11,9 @@ h1 {
     padding-bottom: 3rem;
 }
 
+form {
+    border: 1px solid red;
+}
 
 /* styling for toggle button
 
@@ -42,7 +45,9 @@ h1 {
     margin: 3rem;
 }
 
-
+ul {
+    list-style: none;
+}
 /* The slider */
 .slider {
     position: absolute;
