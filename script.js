@@ -13,3 +13,12 @@ const prices = {
 };
 
 let discountApplied = false
+
+function calculatePrice(){
+let pageViews = pageViewSlider.value
+
+    let price = prices[`${
+        pageviews < 50 ? pageviews + "k" : "1m"
+    }`] * (discountApplied ? 0.75 : 1);
+
+}
