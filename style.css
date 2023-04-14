@@ -13,6 +13,12 @@ h1 {
 
 form {
     border: 1px solid red;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* styling for toggle button
