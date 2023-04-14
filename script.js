@@ -27,3 +27,7 @@ billingSwitch.addEventListener('change', () => {
     discountApplied = toggleSwitch.checked;
     calculatePrice()
 })
+
+pageViewSlider.addEventListener('input', () => {
+    calculatePrice();
+});
