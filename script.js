@@ -22,3 +22,7 @@ let pageViews = pageViewSlider.value
     }`] * (discountApplied ? 0.75 : 1);
 
 }
+
+billingSwitch.addEventListener('change', () => {
+    discountApplied = toggleSwitch.checked;
+})
