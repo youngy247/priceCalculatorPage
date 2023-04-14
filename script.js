@@ -57,7 +57,7 @@ let pageViews = pageViewSlider.value
     // console.log(pageViews)
 
     priceValue.textContent = `$${price.toFixed(2)}`
-    pageViewNumber.textContent = `PAGEVIEWS: ${view}`
+    pageViewNumber.textContent = `${view} PAGEVIEWS`
 }
 
 billingSwitch.addEventListener('change', () => {
