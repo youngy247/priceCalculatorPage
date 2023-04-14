@@ -26,11 +26,11 @@ let pageViews = pageViewSlider.value
         "5": 36
     }
     const views = {
-        "1": "10k",
-        "2": "50k",
-        "3": "100k",
-        "4": "500k",
-        "5": "1m"
+        "1": "10K",
+        "2": "50K",
+        "3": "100K",
+        "4": "500K",
+        "5": "1M"
     }
 // console.log((pageViews < 5 ? pageViews + "k" : "1m"))
 
