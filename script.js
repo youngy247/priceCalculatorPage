@@ -18,11 +18,12 @@ function calculatePrice(){
 let pageViews = pageViewSlider.value
 
     let price = prices[`${
-        pageviews < 50 ? pageviews + "k" : "1m"
+        pageViews < 50 ? pageViews + "k" : "1m"
     }`] * (discountApplied ? 0.75 : 1);
 
 }
 
 billingSwitch.addEventListener('change', () => {
     discountApplied = toggleSwitch.checked;
+    calculatePrice()
 })
