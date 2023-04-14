@@ -21,6 +21,18 @@ form {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.page-views-labels{
+    display: flex;
+    border: 1px solid red;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.price {
+    border: 1px solid red;
+}
+
 
 .slider-container {
     position: relative;
@@ -40,7 +52,7 @@ form {
 }
 
 .switch-container{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: 23rem;
     margin: 0 auto;
 }
@@ -53,7 +65,7 @@ form {
     width: 60px;
     height: 34px;
     margin: 0 auto;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 /* Hide default HTML checkbox */
