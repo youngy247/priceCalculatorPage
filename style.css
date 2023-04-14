@@ -105,6 +105,9 @@ body {
 .switch-container {
     margin-bottom: 40px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .switch {
@@ -125,20 +128,35 @@ row-gap: 0.7rem;
 }
 
 .trial-container button {
-    max-height: 2rem;
+    height: 2rem;
+    width: 8rem;
     align-self: flex-end;
 }
 
 
-.switch-container .billing-cycle {
+.switch-container .billing-option {
     font-weight: 700;
     color: #2c2c2c;
     margin-right: 10px;
 }
 
+.billing-options {
+    display: flex;
+}
+
+.billing-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+
+
 .switch-container .discount {
     font-weight: 700;
-    color: #4050f5;
+    color: red;
 }
 
 .switch-container .slider {
@@ -146,7 +164,10 @@ row-gap: 0.7rem;
     display: inline-block;
     width: 70px;
     height: 34px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
 
 .switch-container .slider input {
     display: none;
@@ -180,7 +201,9 @@ form {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+.fa-check{
+    color: blue;
+}
 
 /* Hide default HTML checkbox */
 .switch input {
