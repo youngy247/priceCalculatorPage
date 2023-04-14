@@ -22,6 +22,18 @@ let pageViews = parseInt(pageViewSlider.value);
     let price = prices[`${
         pageViews < 50 ? pageViews + "k" : "1m"
     }`] * (discountApplied ? 0.75 : 1);
+
+    if (discountApplied) {
+        discountValue.style.display = "block"
+    } else {
+        discountValue.style.display = "none"
+    }
+
+    if (billingSwitch.checked) {
+        price *= 12
+    }
+
+
     // console.log(pageViews)
     priceValue.textContent = `$${price.toFixed(2)}`;
 
