@@ -103,12 +103,32 @@ body {
 }
 
 .switch-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 40px;
     font-size: 14px;
 }
+
+.switch {
+    display: flex;
+    align-items: center;
+}
+
+.trial-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trial-container ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+row-gap: 0.7rem;
+}
+
+.trial-container button {
+    max-height: 2rem;
+    align-self: flex-end;
+}
+
 
 .switch-container .billing-cycle {
     font-weight: 700;
