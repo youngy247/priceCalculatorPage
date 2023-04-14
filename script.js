@@ -1,7 +1,8 @@
 const pageViewSlider = document.querySelector('.range')
-const billingSwitch = document.querySelector('.switch')
+const billingSwitch = document.querySelector('.switch input')
 const priceValue = document.querySelector('.price-value')
-const discountValue = document.querySelector('.discount')
+const pageViewNumber = document.querySelector('.page-views')
+
 
 
 
@@ -9,25 +10,36 @@ const discountValue = document.querySelector('.discount')
 let discountApplied = false
 
 function calculatePrice(){
-let pageViews = parseInt(pageViewSlider.value);
-
+let pageViews = pageViewSlider.value
+// console.log(pageViews)
+    const example = [
+        {
+            views: 2,
+            price: 10
+        }
+    ]
     const prices = {
-        "10k": 8,
-        "50k": 12,
-        "100k": 16,
-        "500k": 24,
-        "1m": 36
+        "1": 8,
+        "2": 12,
+        "3": 16,
+        "4": 24,
+        "5": 36
     }
+// console.log((pageViews < 5 ? pageViews + "k" : "1m"))
 
-    let price = prices[`${
-        pageViews < 50 ? pageViews + "k" : "1m"
-    }`] * (discountApplied ? 0.75 : 1);
+        price = prices[pageViews] * (discountApplied ? 0.75 : 1);
+// console.log(price)
 
-    if (discountApplied) {
-        discountValue.style.display = "block"
-    } else {
-        discountValue.style.display = "none"
-    }
+    // console.log(pageViews)
+
+
+
+
+    // if (discountApplied) {
+    //     discountValue.style.display = "block"
+    // } else {
+    //     discountValue.style.display = "none"
+    // }
 
     if (billingSwitch.checked) {
         price *= 12
@@ -35,15 +47,19 @@ let pageViews = parseInt(pageViewSlider.value);
 
 
     // console.log(pageViews)
-    priceValue.textContent = `$${price.toFixed(2)}`;
 
+    priceValue.textContent = `$${price.toFixed(2)}`
+    pageViewNumber.textContent = `PAGEVIEWS: ${pageViews}`
 }
-console.log(priceValue)
+
 billingSwitch.addEventListener('change', () => {
+    console.log(billingSwitch)
     discountApplied = billingSwitch.checked;
     calculatePrice()
 })
 
 pageViewSlider.addEventListener('input', () => {
+    // onchange="rangevalue.value=value"
     calculatePrice();
 });
+
