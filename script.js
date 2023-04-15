@@ -1,6 +1,7 @@
 const pageViewSlider = document.querySelector('.range')
 const billingSwitch = document.querySelector('.switch input')
 const priceValue = document.querySelector('.price-value')
+const totalValue = document.querySelector('.total-value')
 const pageViewNumber = document.querySelector('.page-views')
 
 
@@ -35,6 +36,7 @@ let pageViews = pageViewSlider.value
 // console.log((pageViews < 5 ? pageViews + "k" : "1m"))
 
         price = prices[pageViews] * (discountApplied ? 0.75 : 1);
+        total = prices[pageViews] * (discountApplied ? 0.75 : 1);
         view = views[pageViews]
 // console.log(price)
 
@@ -50,13 +52,14 @@ let pageViews = pageViewSlider.value
     // }
 
     if (billingSwitch.checked) {
-        price *= 12
+        total *= 12
     }
 
 
     // console.log(pageViews)
 
     priceValue.textContent = `$${price.toFixed(2)}`
+    totalValue.textContent =  `$${total.toFixed(2)}`
     pageViewNumber.textContent = `${view} PAGEVIEWS`
 }
 
