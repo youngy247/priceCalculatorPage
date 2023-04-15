@@ -69,8 +69,18 @@ body {
     margin-right: 10px;
 }
 
+.price-value.total {
+    font-size: 1rem;
+}
+
 .slider-container .price-label {
     font-size: 16px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 .slider-container .range {
@@ -137,7 +147,7 @@ row-gap: 0.7rem;
 .switch-container .billing-option {
     font-weight: 700;
     color: #2c2c2c;
-    margin-right: 10px;
+    margin-left: 1px;
 }
 
 .billing-options {
@@ -210,7 +220,7 @@ form {
     opacity: 0;
     width: 0;
     height: 0;
-    margin: 1rem;
+    margin: 0;
 }
 
 ul {
